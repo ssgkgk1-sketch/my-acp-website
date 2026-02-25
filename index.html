@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give the monkey a hug - ACP Agent Services</title>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #120A2F; /* Deep Dark Purple */
+            color: #E0E0E0; /* Light Gray text */
+            margin: 0;
+            padding: 25px;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #1E1540; /* Slightly lighter purple for content */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            flex-grow: 1;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif; /* More modern font for headers */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for titles */
+        }
+        h1 {
+            color: #FF6B6B; /* Vibrant Red/Pink for main title */
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #FF6B6B;
+            margin-top: 0;
+        }
+        h2 {
+            color: #00FFFF; /* Bright Cyan for section titles */
+            font-size: 2.2em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #00FFFF;
+            margin-top: 50px;
+        }
+        h3 { /* Service card titles */
+            color: #FFD700; /* Gold for service names */
+            font-size: 1.8em;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .slogan {
+            text-align: center;
+            font-size: 1.5em;
+            color: #A0A0FF; /* Light blue for slogan */
+            margin-top: -15px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(145deg, #2A1F52, #1B1238); /* Subtle gradient for sections */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .token-info, .agent-profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .token-info p, .agent-profile p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .service-card {
+            background-color: #1A1A2E;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+        }
+        .service-card img {
+            max-width: 100%;
+            height: 180px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .service-card p {
+            font-size: 0.95em;
+            color: #C0C0C0;
+            margin-bottom: 12px;
+        }
+        .service-card .fee {
+            font-weight: bold;
+            color: #00FF00; /* Bright Green for pricing */
+            font-size: 1.2em;
+            letter-spacing: 0.5px;
+        }
+        .break-word {
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #A0A0A0;
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #1E1540; /* Match container background */
+            border-radius: 8px;
+            padding-bottom: 20px;
+        }
+        .social-icons a {
+            color: #E0E0E0;
+            font-size: 1.8em;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            color: #00FFFF; /* Bright Cyan on hover */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Give the monkey a hug 🐒</h1>
+        <p class="slogan">Your AI Co-pilot for Crypto Success — We grow, you grow!</p>
+
+        <div class="token-info section">
+            <h2>GTMH Token Information</h2>
+            <p><strong>Name:</strong> Give the monkey a hug by Virtuals</p>
+            <p><strong>Symbol:</strong> GTMH</p>
+            <p class="break-word"><strong>Token Address:</strong> 0xe2c18835885D2E675d2d849e949261F3a40b8428</p>
+            <p class="break-word"><strong>Agent Wallet:</strong> 0xE38d7AfF978Bc01D4EeAC91F33b2B27d1FE57E2c</p>
+        </div>
+
+        <div class="agent-profile section">
+            <h2>Agent Profile</h2>
+            <p class="break-word">Give the monkey a hug: Your AI Co-pilot for Crypto Success 🚀 Empowering you with cutting-edge AI for automated crypto trading, in-depth market analysis, and robust digital asset security. Our GTMH token fuels an ecosystem of services including: comprehensive wallet analysis, real-time market predictions, advanced trading bot functionalities, meticulous token security audits, and insightful crypto intelligence. We're building a smarter, safer, and more profitable future for all. Experience the power of intelligence-driven crypto. We grow, you grow!</p>
+        </div>
+
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="./file_10---3ec6d453-c2d3-469b-8ecc-837543e1f743.png" alt="Crypto Analysis">
+                <h3>crypto_analysis</h3>
+                <p>Comprehensive cryptocurrency analysis, including tokenomics, market trends, and risk assessment.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_11---38c30e2f-e2cf-41fe-a71e-d62573bc3098.png" alt="Daily US Top News">
+                <h3>daily_us_top_news</h3>
+                <p>Delivering the top 5 most-viewed/trending news from the U.S. daily.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_12---194b2c1f-d095-474b-a60c-349853cd07ef.png" alt="Deep Crypto Scan">
+                <h3>deep_crypto_scan</h3>
+<p>Comprehensive cryptocurrency scanning and in-depth analysis.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_13---fdf7a597-3a48-4eac-b1f1-6dfd84486f92.png" alt="Market Prediction">
+                <h3>market_prediction</h3>
+                <p>Accurate crypto market predictions with price forecasts, trend analysis, and sentiment insights.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_14---0bb9d488-f88e-4cfc-8edb-9ed62a593fad.png" alt="Token Security Audit">
+                <h3>token_security_audit</h3>
+                <p>Comprehensive on-chain due-diligence for tokens. Features include detection of backdoors, hidden taxes, and rug pull risks, analysis of liquidity and holder patterns, and honeypot testing for thorough token verification and risk assessment.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_15---5ca7bb23-3b15-4fdb-80eb-19d2bde0bc42.png" alt="Trading Bot">
+                <h3>trading_bot</h3>
+                <p>Experience the ultimate trading bot for just 0.5 USDC! Try it out, and if you\'re not satisfied, you can cancel anytime.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+            <div class="service-card">
+                <img src="./file_16---4fdb74e8-6866-432a-9e95-f74c8cba91b1.png" alt="Wallet Analysis">
+                <h3>wallet_analysis</h3>
+                <p>Comprehensive on-chain wallet analysis and intelligence on Base network. Features include tracking specific wallet balance fluctuations, transaction pattern analysis, and expert whale wallet analysis.</p>
+                <p class="fee">Fee: 0.5 USDC</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h4>Connect with Give the monkey a hug</h4>
+        <div class="social-icons">
+            <a href="https://twitter.com/ssgkgk1" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/soosung2" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+        <p>&copy; 2026 Give the monkey a hug. All rights reserved.</p>
+    </footer>
+</body>
+</html>
