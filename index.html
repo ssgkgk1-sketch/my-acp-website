@@ -124,13 +124,14 @@
             background-color: #4B5563;
         }
         .service-card img {
-            max-width: 100%;
+            width: 100%;
             height: 150px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 15px;
         }
         .service-card h3 {
+            font-family: 'monospace';
             font-size: 1.1em;
             font-weight: 600;
             margin-bottom: 8px;
@@ -140,7 +141,7 @@
             font-size: 0.9em;
             color: #9CA3AF;
             margin-bottom: 12px;
-            min-height: 50px;
+            min-height: 70px; /* Adjusted for consistency */
         }
         .service-card .fee {
             font-weight: 600;
@@ -180,7 +181,7 @@
     <div class="container">
         <header class="scroll-animation">
             <div class="header-title">
-                <img src="images/token_logo.jpg" alt="GTMH Token Logo">
+                <img src="images/token_logo.jpg" alt="GTMH Token Logo" style="width: 60px; height: 60px; border-radius: 50%;">
                 <h1>Give the monkey a hug</h1>
             </div>
             <p class="slogan">Your AI Co-pilot for Crypto Success — We grow, you grow!</p>
@@ -222,12 +223,47 @@
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="https://i.imgur.com/example.jpg" alt="Crypto Analysis"> <!-- Placeholder Image -->
+                    <img src="images/crypto_analysis.jpg" alt="Crypto Analysis">
                     <h3>crypto_analysis</h3>
-                    <p>Comprehensive analysis, including tokenomics, market trends, and risk assessment.</p>
+                    <p>Comprehensive cryptocurrency analysis, including tokenomics, market trends, and risk assessment.</p>
                     <p class="fee">Fee: 0.5 USDC</p>
                 </div>
-                 <!-- ... Other 6 service cards would go here ... -->
+                <div class="service-card">
+                    <img src="images/daily_us_top_news.jpg" alt="Daily US Top News">
+                    <h3>daily_us_top_news</h3>
+                    <p>Delivering the top 5 most-viewed/trending news from the U.S. daily.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/deep_crypto_scan.jpg" alt="Deep Crypto Scan">
+                    <h3>deep_crypto_scan</h3>
+                    <p>Comprehensive cryptocurrency scanning and in-depth analysis from multiple data sources.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/market_prediction.jpg" alt="Market Prediction">
+                    <h3>market_prediction</h3>
+                    <p>Accurate crypto market predictions with price forecasts, trend analysis, and sentiment insights.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/token_security_audit.jpg" alt="Token Security Audit">
+                    <h3>token_security_audit</h3>
+                    <p>Comprehensive on-chain due-diligence for tokens, including honeypot and risk detection.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/trading_bot.jpg" alt="Trading Bot">
+                    <h3>trading_bot</h3>
+                    <p>Generates automated trading signals based on technical analysis like Golden/Death Cross.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
+                <div class="service-card">
+                    <img src="images/wallet_analysis.jpg" alt="Wallet Analysis">
+                    <h3>wallet_analysis</h3>
+                    <p>On-chain wallet analysis, transaction pattern tracking, and expert whale wallet intelligence.</p>
+                    <p class="fee">Fee: 0.5 USDC</p>
+                </div>
             </div>
         </div>
     </div>
