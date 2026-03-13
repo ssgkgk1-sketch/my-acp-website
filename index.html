@@ -3,173 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give the monkey a hug - Your AI Co-pilot for Crypto Success</title>
+    <title>Give the monkey a hug - Premium AI Crypto Co-pilot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Dream Version CSS */
+        :root {
+            --primary-brown: #A67C52; /* Bronze Brown */
+            --dark-bg: #030303;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --gold-glow: rgba(166, 124, 82, 0.4);
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #111827; /* Dark Blue-Gray */
-            color: #E5E7EB; /* Light Gray text */
+            background-color: var(--dark-bg);
+            color: #FFFFFF;
             margin: 0;
-            padding: 25px;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        /* --- Header --- */
+        /* --- Header & Hero --- */
         header {
             text-align: center;
-            margin-bottom: 60px;
+            padding: 100px 0 60px 0;
+            background: radial-gradient(circle at center, #1a1510 0%, #030303 70%);
         }
+        
         .header-title {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            font-size: 2.5em;
-            font-weight: 700;
-            color: #FFFFFF;
+            gap: 25px;
         }
+
         .header-title img {
-            width: 60px;
-            height: 60px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
+            border: 2px solid var(--primary-brown);
+            box-shadow: 0 0 30px var(--gold-glow);
         }
+
+        .header-title h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary-brown);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(166, 124, 82, 0.6);
+        }
+
         .slogan {
-            font-size: 1.2em;
-            color: #9CA3AF;
-            margin-top: 10px;
+            font-size: 1.3em;
+            color: #888;
+            font-weight: 300;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* --- Connect Wallet (Visual) --- */
+        .nav-actions {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
+        .connect-btn {
+            border: 1px solid var(--primary-brown);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: var(--primary-brown);
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .connect-btn:hover {
+            background: var(--primary-brown);
+            color: #000;
         }
 
         /* --- Section Styling --- */
         .section {
-            background-color: #1F2937; /* Lighter Dark Blue-Gray */
-            padding: 30px;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            border: 1px solid #374151;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(166, 124, 82, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
         .section-title {
             font-size: 1.8em;
             font-weight: 600;
-            color: #FFFFFF;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #374151;
-        }
-
-        /* --- Token Info Pills --- */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        .info-pill {
+            color: var(--primary-brown);
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background-color: #374151;
-            padding: 12px 18px;
-            border-radius: 12px;
-            font-size: 0.95em;
+            gap: 15px;
+        }
+
+        /* --- Info Pills --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .info-pill {
+            background: rgba(255,255,255,0.02);
+            padding: 20px;
+            border-radius: 20px;
+            border-left: 4px solid var(--primary-brown);
         }
         .pill-title {
-            font-weight: 600;
-            color: #D1D5DB;
+            font-size: 0.8em;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
         }
         .pill-value {
             font-family: 'monospace';
-            color: #9CA3AF;
-            word-wrap: break-word;
-            word-break: break-all;
+            font-size: 1.1em;
+            color: #DDD;
         }
         
         /* --- Agent Profile --- */
-        .profile-section h3 {
-            font-size: 1.2em;
-            color: #A5B4FC; /* Indigo Light */
-            margin-top: 20px;
-            margin-bottom: 8px;
+        .profile-content h3 {
+            color: #FFF;
+            font-size: 1.4em;
+            margin-top: 30px;
         }
-        .profile-section p {
-            margin: 0 0 15px 0;
-            line-height: 1.7;
-            color: #D1D5DB;
+        .profile-content p {
+            line-height: 1.8;
+            color: #AAA;
+            font-size: 1.05em;
         }
 
         /* --- Services Grid --- */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .service-card {
-            background-color: #374151;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.03);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .service-card:hover {
-            transform: translateY(-5px);
-            background-color: #4B5563;
+            transform: translateY(-10px);
+            border-color: var(--primary-brown);
+            box-shadow: 0 15px 30px rgba(166, 124, 82, 0.2);
         }
         .service-card img {
             width: 100%;
-            height: 150px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            filter: grayscale(30%);
+            transition: 0.4s;
+        }
+        .service-card:hover img {
+            filter: grayscale(0%);
+        }
+        .service-body {
+            padding: 25px;
+        }
+        .status-badge {
+            font-size: 0.7em;
+            background: rgba(52, 211, 153, 0.1);
+            color: #34D399;
+            padding: 4px 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
         }
         .service-card h3 {
-            font-family: 'monospace';
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #E5E7EB;
+            margin: 0 0 10px 0;
+            color: #EEE;
+            font-size: 1.2em;
         }
         .service-card p {
             font-size: 0.9em;
-            color: #9CA3AF;
-            margin-bottom: 12px;
-            min-height: 70px; /* Adjusted for consistency */
-        }
-        .service-card .fee {
-            font-weight: 600;
-            color: #34D399; /* Emerald */
+            color: #777;
+            line-height: 1.6;
         }
 
         /* --- Footer --- */
         .footer {
-            margin-top: 60px;
+            padding: 80px 0;
             text-align: center;
-            color: #6B7280;
-            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
         .social-icons a {
-            color: #9CA3AF;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            color: #444;
+            font-size: 1.8em;
+            margin: 0 15px;
+            transition: 0.3s;
         }
         .social-icons a:hover {
-            color: #A5B4FC;
+            color: var(--primary-brown);
         }
 
         /* --- Scroll Animation --- */
         .scroll-animation {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
         .scroll-animation.visible {
             opacity: 1;
@@ -178,17 +230,21 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="scroll-animation">
-            <div class="header-title">
-                <img src="images/token_logo.jpg" alt="GTMH Token Logo" style="width: 60px; height: 60px; border-radius: 50%;">
-                <h1>Give the monkey a hug</h1>
-            </div>
-            <p class="slogan">Your AI Co-pilot for Crypto Success — We grow, you grow!</p>
-        </header>
+    <div class="nav-actions">
+        <a href="#" class="connect-btn">CONNECT WALLET</a>
+    </div>
 
+    <header class="scroll-animation">
+        <div class="header-title">
+            <img src="images/token_logo.jpg" alt="GTMH Logo">
+            <h1>Give the monkey a hug</h1>
+        </div>
+        <p class="slogan">Premium AI Co-pilot for Global Crypto Intelligence</p>
+    </header>
+
+    <div class="container">
         <div class="section scroll-animation">
-            <h2 class="section-title">GTMH Token Information</h2>
+            <h2 class="section-title"><i class="fas fa-coins"></i> Token Ecosystem</h2>
             <div class="info-grid">
                 <div class="info-pill">
                     <span class="pill-title">Name</span>
@@ -199,7 +255,7 @@
                     <span class="pill-value">GTMH</span>
                 </div>
                 <div class="info-pill">
-                    <span class="pill-title">Token Address</span>
+                    <span class="pill-title">Contract Address</span>
                     <span class="pill-value">0xe2c18835885D2E675d2d849e949261F3a40b8428</span>
                 </div>
                 <div class="info-pill">
@@ -209,60 +265,74 @@
             </div>
         </div>
 
-        <div class="section profile-section scroll-animation">
-            <h2 class="section-title">Agent Profile</h2>
-            <h3>Our Mission 🚀</h3>
-            <p>Your AI Co-pilot for Crypto Success. We empower you with cutting-edge AI for automated trading, in-depth analysis, and robust digital asset security.</p>
-            <h3>The GTMH Ecosystem</h3>
-            <p>Our GTMH token fuels an ecosystem of 7 services including: comprehensive wallet analysis, real-time market predictions, advanced trading bot functionalities, meticulous token security audits, and insightful crypto intelligence.</p>
-            <h3>Our Vision</h3>
-            <p>We're building a smarter, safer, and more profitable future for all. Experience the power of intelligence-driven crypto. We grow, you grow!</p>
+        <div class="section scroll-animation">
+            <h2 class="section-title"><i class="fas fa-user-robot"></i> Agent Profile</h2>
+            <div class="profile-content">
+                <h3>The Mission 🚀</h3>
+                <p>We empower the next generation of investors with cutting-edge AI. Our agent is designed for high-frequency analysis, automated trading, and meticulous digital asset security. We don't just follow the market; we interpret it.</p>
+                <h3>Global Intelligence Hub</h3>
+                <p>Fuelled by the GTMH token, our ecosystem integrates 7 specialized AI services. From on-chain whale tracking to real-time market sentiment analysis, we provide the ultimate edge in the volatile world of crypto.</p>
+            </div>
         </div>
 
         <div class="section scroll-animation">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> Specialized AI Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <img src="images/crypto_analysis.jpg" alt="Crypto Analysis">
-                    <h3>crypto_analysis</h3>
-                    <p>Comprehensive cryptocurrency analysis, including tokenomics, market trends, and risk assessment.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>Crypto Analysis</h3>
+                        <p>In-depth tokenomics and market trend assessment.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/daily_us_top_news.jpg" alt="Daily US Top News">
-                    <h3>daily_us_top_news</h3>
-                    <p>Delivering the top 5 most-viewed/trending news from the U.S. daily.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <img src="images/daily_us_top_news.jpg" alt="Daily US News">
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>Daily US Briefing</h3>
+                        <p>Real-time updates on U.S. market influencers.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/deep_crypto_scan.jpg" alt="Deep Crypto Scan">
-                    <h3>deep_crypto_scan</h3>
-                    <p>Comprehensive cryptocurrency scanning and in-depth analysis from multiple data sources.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <img src="images/deep_crypto_scan.jpg" alt="Deep Scan">
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>Deep Crypto Scan</h3>
+                        <p>Multi-source intelligence for hidden patterns.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <img src="images/market_prediction.jpg" alt="Market Prediction">
-                    <h3>market_prediction</h3>
-                    <p>Accurate crypto market predictions with price forecasts, trend analysis, and sentiment insights.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>AI Market Prediction</h3>
+                        <p>Sentiment-driven price and trend forecasting.</p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/token_security_audit.jpg" alt="Token Security Audit">
-                    <h3>token_security_audit</h3>
-                    <p>Comprehensive on-chain due-diligence for tokens, including honeypot and risk detection.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <img src="images/token_security_audit.jpg" alt="Security Audit">
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>Security & Risk Audit</h3>
+                        <p>On-chain due diligence and honeypot detection.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <img src="images/trading_bot.jpg" alt="Trading Bot">
-                    <h3>trading_bot</h3>
-                    <p>Generates automated trading signals based on technical analysis like Golden/Death Cross.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>Smart Trading Signals</h3>
+                        <p>Technical signals based on algorithmic analysis.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <img src="images/wallet_analysis.jpg" alt="Wallet Analysis">
-                    <h3>wallet_analysis</h3>
-                    <p>On-chain wallet analysis, transaction pattern tracking, and expert whale wallet intelligence.</p>
-                    <p class="fee">Fee: 0.5 USDC</p>
+                    <div class="service-body">
+                        <span class="status-badge">● LIVE & ACTIVE</span>
+                        <h3>On-chain Wallet Tracking</h3>
+                        <p>Expert pattern tracking of whale movements.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,24 +340,19 @@
 
     <footer class="footer scroll-animation">
         <div class="social-icons">
-            <a href="https://twitter.com/ssgkgk1" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://t.me/soosung2" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://twitter.com/ssgkgk1" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/soosung2" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         </div>
-        <p>&copy; 2026 Give the monkey a hug. All rights reserved.</p>
+        <p style="margin-top: 20px;">&copy; 2026 Give the monkey a hug. All rights reserved.</p>
     </footer>
 
     <script>
-        // Scroll Animation Script
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
-
-        const elementsToAnimate = document.querySelectorAll('.scroll-animation');
-        elementsToAnimate.forEach(el => observer.observe(el));
+        document.querySelectorAll('.scroll-animation').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
